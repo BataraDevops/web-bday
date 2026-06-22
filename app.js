@@ -163,6 +163,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const music = new MusicBox();
 
+  // Matikan musik otomatis saat tab/app disembunyikan (pindah app, kunci layar, dsb)
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    // Pause audio MP3
+    if (music.audio && !music.audio.paused) {
+      music.audio.pause();
+    }
+    // Hentikan flag synth juga supaya tidak lanjut menjadwalkan not baru
+    music.isPlaying = false;
+  } else {
+    // Opsional: lanjutkan musik lagi saat kembali ke tab
+    if (music.audio && music.useMP3) {
+      music.audio.play().catch(() => {});
+      music.isPlaying = true;
+    }
+  }
+});
+
   // Mute button
   const muteBtn   = document.getElementById("mute-btn");
   const iconOn    = muteBtn.querySelector(".icon-unmuted");
