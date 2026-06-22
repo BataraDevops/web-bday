@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Happy Birthday, Mom ♥</title>
+  <meta name="description" content="Hadiah digital spesial untuk Mama tercinta — lembaran kenangan penuh cinta.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- BACKGROUND MUSIC AUDIO ELEMENT -->
+  <audio id="bg-audio" src="audio/asongformama.mp3" preload="auto" loop></audio>
+
+  <!-- LOADER -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-content">
+      <div class="loader-hearts">
+        <span>♥</span><span>♥</span><span>♥</span>
+      </div>
+      <p class="loader-text">Membuka lembaran kenangan...</p>
+    </div>
+  </div>
+
+  <!-- GIFT OPENING SCREEN -->
+  <div id="gift-opening-screen" class="opening-overlay">
+    <div class="opening-sparkles" id="opening-sparkles"></div>
+    <div class="gift-box-wrapper">
+      <div class="gift-box" id="main-gift-box">
+        <!-- Bow decoration -->
+        <div class="gift-box-bow">
+          <div class="bow-loop bow-left"></div>
+          <div class="bow-loop bow-right"></div>
+          <div class="bow-center"></div>
+        </div>
+        <div class="gift-box-lid"></div>
+        <div class="gift-box-body">
+          <div class="gift-ribbon-v"></div>
+          <div class="gift-ribbon-h"></div>
+        </div>
+      </div>
+    </div>
+    <h2 class="opening-title">Ada Kado Spesial Untuk mama...</h2>
+    <p class="opening-hint">Ketuk Kado Untuk Membuka ♥</p>
+  </div>
+
+  <!-- FLOATING MUTE BUTTON -->
+  <button id="mute-btn" aria-label="Toggle musik">
+    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round" style="display:none">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+  <!-- NAVIGATION CONTROLS -->
+  <div id="nav-controls" class="nav-controls">
+    <button id="btn-prev" class="nav-btn nav-btn-prev" aria-label="Kembali">← Kembali</button>
+    <div class="nav-dots" id="nav-dots"></div>
+    <button id="btn-next" class="nav-btn nav-btn-next" aria-label="Lanjut">Lanjut ♥</button>
+  </div>
+
+  <!-- APP CONTAINER — All slides stack here -->
+  <div id="app-container">
+
+    <!-- SLIDE 0: HERO -->
+    <section id="hero" class="section" data-index="0">
+      <div class="hero-bg">
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=80"
+          alt="Mama tercinta" class="hero-img">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="reveal-line">Selamat Ulang Tahun,</span>
+          <span class="reveal-line hero-name">Wanita luar biasa yang kupanggil Mama</span>
+        </h1>
+        <p class="hero-subtitle reveal-line">Sumber kekuatan dan kasih sayangku.</p>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="scroll-arrow">↓</span>
+        <p class="hint-text">Ketuk di mana aja untuk membuka...</p>
+      </div>
+    </section>
+
+    <!-- SLIDE 1: SWIPE CARDS -->
+    <section id="swipe-cards" class="section" data-index="1">
+      <h2 class="section-label">Bab 1</h2>
+      <h3 class="section-title">Kepingan Waktu</h3>
+      <div class="cards-container">
+        <div class="swiper" id="card-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-inner">
+                <div class="card-image">
+                  <img src="img/kebersamaan.png" alt="Kebersamaan kita">
+                </div>
+                <p class="card-caption">Kebersamaan kita</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-inner">
+                <div class="card-image">
+                  <img src="img/SenyumFavoritku.png" alt="Bunga untukmu">
+                </div>
+                <p class="card-caption">Senyum Favoritku</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-inner">
+                <div class="card-image">
+                  <img src="img/PusatKehangatan.png" alt="Penuh cinta">
+                </div>
+                <p class="card-caption">Pusat dari Segala Kehangatan</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-inner">
+                <div class="card-image">
+                  <img src="img/seyummenenagkandunia.png" alt="Damai bersamamu">
+                </div>
+                <p class="card-caption">Senyum yang Menenangkan Dunia</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-inner">
+                <div class="card-image">
+                  <img src="img/cahaya.png" alt="Cahaya hidupku">
+                </div>
+                <p class="card-caption">Cahaya yang Tak Pernah Redup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="slide-hint">← Geser kartu ke kiri atau kanan untuk melihat photo→</p>
+    </section>
+
+    <!-- SLIDE 2: ENVELOPE LETTER -->
+    <section id="interactive-gift" class="section" data-index="2">
+      <h2 class="section-label">Bab 2</h2>
+      <h3 class="section-title">Surat Ucapan</h3>
+      <div class="envelope-scene">
+        <div class="envelope" id="gift-envelope">
+          <!-- Flap (top triangle) -->
+          <div class="env-flap"></div>
+          <!-- Left & right side triangles (decorative, form body V shape) -->
+          <div class="env-left"></div>
+          <div class="env-right"></div>
+          <!-- Bottom body -->
+          <div class="env-bottom"></div>
+          <!-- Gold Seal on top of flap -->
+          <div class="env-seal" id="env-seal">♥</div>
+          <!-- Letter card — slides up on open -->
+          <div class="env-letter" id="gift-letter" aria-label="Surat Spesial untuk Mama">
+            <div class="env-letter-inner">
+              <div class="env-letter-decoration">
+                <span class="letter-gold-heart">♥</span>
+              </div>
+              <p class="env-letter-salutation">Untuk penyemangat terbesar dalam hidupku...</p>
+              <p class="env-letter-excerpt">
+                Terima kasih atas setiap kehangatan, bimbingan penuh kasih, dan doa tulus yang tak pernah putus terucap
+                di doamu...
+              </p>
+              <span class="letter-action-hint">✉ Ketuk Surat untuk Membaca ♥</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="slide-hint">✉ Ketuk segel ♥ untuk membuka amplop</p>
+    </section>
+
+    <!-- SLIDE 3: PARALLAX QUOTE -->
+    <section id="parallax-photo" class="section" data-index="3">
+      <div class="parallax-bg" id="parallax-bg" style="background-image:url('img/family.png')">
+      </div>
+      <div class="parallax-overlay">
+        <blockquote class="parallax-quote">
+          "Bagi dunia, Mama mungkin hanya satu orang. Namun bagi kami, Mama adalah seluruh dunia."
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: POLAROID SCATTER -->
+    <section id="polaroid-scatter" class="section" data-index="4">
+      <h2 class="section-label">Bab 3</h2>
+      <h3 class="section-title">Serpihan Kenangan</h3>
+      <div class="scatter-stage" id="scatter-container"></div>
+      <p class="slide-hint">✨ Sentuh dan geser foto sesuka Mama</p>
+    </section>
+
+    <!-- SLIDE 5: CLOSING -->
+    <section id="closing" class="section" data-index="5">
+      <div class="hearts-bg" id="hearts-container"></div>
+      <div class="closing-content">
+        <p class="closing-text">Semoga kebahagiaan selalu menyertai setiap langkahmu, Mama.</p>
+        <p class="signature">Dengan cinta selalu,<br>Anakmu</p>
+        <p class="closing-date">22 Juni 2026</p>
+        <button class="easter-trigger-btn" id="easter-egg-trigger" aria-label="Kejutan terakhir">
+          ✿ Kejutan terakhir untukmu
+        </button>
+      </div>
+    </section>
+
+  </div><!-- end #app-container -->
+
+  <!-- FULLSCREEN LETTER OVERLAY -->
+  <div id="letter-overlay-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="letter-parchment">
+      <div class="letter-border">
+        <div class="letter-header">
+          <span class="letter-ornament">✿ ♥ ✿</span>
+          <h2>Untuk Mama Tercinta,</h2>
+        </div>
+        <div class="letter-body">
+          <p>Di setiap kepingan waktu yang kami simpan, selalu ada Mama di dalamnya.</p>
+          <p>Terima kasih karena selalu ada, bahkan ketika kami tidak menyadarinya. Terima kasih untuk kesabaran yang
+            tak habis-habis,
+            untuk cinta yang tidak pernah meminta balasan, dan untuk semua hal kecil yang ternyata menjadi hal terbesar
+            dalam hidup
+            kami.</p>
+          <p>Hari ini bukan hanya tentang bertambahnya usia. Hari ini adalah tentang merayakan seorang wanita luar biasa
+            yang telah
+            mengisi hidup kami dengan begitu banyak kasih sayang, kekuatan, dan kehangatan.</p>
+          <p>Semoga tahun-tahun yang akan datang dipenuhi kesehatan, kebahagiaan, dan semua hal baik yang selama ini
+            Mama berikan
+            kepada orang lain.</p>
+        </div>
+        <div class="letter-footer">
+          <p class="letter-sign">Dengan segenap cinta,</p>
+          <p class="letter-author">Anakmu ♥</p>
+        </div>
+      </div>
+      <button class="letter-close-btn" id="letter-close" aria-label="Tutup surat">Tutup Surat ♥</button>
+    </div>
+  </div>
+
+  <!-- EASTER EGG MODAL — Candle Surprise -->
+  <div id="easter-egg-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+    <!-- Starry background overlay that fades in when blown -->
+    <div class="starry-sky-overlay" id="modal-starry-sky"></div>
+    <div class="lampions-container" id="modal-lampions"></div>
+    <canvas id="magic-particles-canvas"></canvas>
+
+    <div class="modal-box">
+      <!-- Initial view: candle -->
+      <div class="modal-candle-view" id="modal-candle-view">
+        <img class="modal-photo"
+          src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80"
+          alt="Mama special">
+        <div class="candle-scene">
+          <div class="candle-glow-ring"></div>
+          <div class="candle-body">
+            <div class="candle-flame" id="candle-flame"></div>
+            <div class="candle-wick"></div>
+            <div class="candle-wax"></div>
+            <!-- Smoke container -->
+            <div class="smoke-container" id="smoke-container"></div>
+          </div>
+        </div>
+        <p class="candle-instruction" id="candle-hint">Ketuk api lilin untuk meniupnya & buat permohonan... 🎂</p>
+      </div>
+      <!-- Surprise card (shown after blow out) -->
+      <div class="modal-wish-view" id="modal-wish-view">
+        <p class="wish-emoji">🎉🌸💖</p>
+        <h3 class="wish-title">Permohonan Dikirim!</h3>
+        <p class="wish-body">Semoga setiap doa dan harapan Mama dikabulkan oleh Tuhan.</p>
+        <ul class="wish-list">
+          <li>✨ Untuk 50 tahun yang luar biasa, semoga Tuhan terus melimpahkan kesehatan dan berkat dalam setiap langkah
+            Mama</li>
+          <li>🌹 Semoga hati Mama selalu dipenuhi damai, dan senyum Mama selalu menjadi bagian dari hari-hari indah kami
+          </li>
+          <li>💕 Tidak ada hadiah yang mampu menggambarkan betapa berharganya Mama bagi kami. Kami mencintaimu, hari
+            ini, esok, dan
+            selamanya!</li>
+        </ul>
+        <button class="modal-close-btn" id="modal-close">Tutup ♥</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>
